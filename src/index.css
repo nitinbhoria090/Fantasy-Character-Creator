@@ -1,0 +1,275 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #0c0907;
+    color: #ede3d4;
+  }
+}
+
+/* Stylized Fantasy Fonts */
+.font-fantasy {
+  font-family: 'Cinzel', Georgia, serif;
+}
+
+.font-fantasy-title {
+  font-family: 'Cinzel Decorative', 'MedievalSharp', 'Uncial Antiqua', 'Cinzel', Georgia, serif;
+}
+
+.font-fantasy-name {
+  font-family: 'Cinzel Decorative', 'MedievalSharp', 'Uncial Antiqua', Georgia, serif;
+  letter-spacing: 0.025em;
+}
+
+.font-uncial {
+  font-family: 'Uncial Antiqua', cursive, Georgia, serif;
+}
+
+.font-almendra {
+  font-family: 'Almendra', Georgia, serif;
+}
+
+.font-medieval {
+  font-family: 'MedievalSharp', 'Cinzel', cursive, Georgia, serif;
+}
+
+.font-mono-numbers {
+  font-family: 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Ancient Alchemist Workbench Dark Textured Background */
+.bg-workbench {
+  background-color: #0c0907;
+  background-image: 
+    radial-gradient(circle at 50% 12%, rgba(245, 185, 75, 0.16) 0%, rgba(12, 9, 7, 0.94) 75%),
+    radial-gradient(ellipse at 88% 85%, rgba(180, 80, 20, 0.18) 0%, transparent 55%),
+    radial-gradient(ellipse at 12% 85%, rgba(45, 90, 160, 0.14) 0%, transparent 55%),
+    linear-gradient(rgba(12, 9, 7, 0.86), rgba(12, 9, 7, 0.94)),
+    url('/src/assets/images/alchemist_workbench_bg_1792579311497.jpg');
+  background-size: cover, cover, cover, cover, cover;
+  background-position: center top;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+/* Ancient Alchemical Manuscript Card */
+.bg-alchemical-card {
+  background: linear-gradient(180deg, rgba(30, 23, 18, 0.96) 0%, rgba(18, 14, 11, 0.98) 100%);
+  border-color: rgba(180, 138, 75, 0.5);
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.9), 
+    0 0 35px rgba(212, 175, 55, 0.1),
+    inset 0 1px 0 rgba(245, 213, 139, 0.2);
+}
+
+.bg-alchemical-panel {
+  background: rgba(14, 11, 8, 0.85);
+  border-color: rgba(138, 104, 57, 0.4);
+}
+
+.border-alchemical-brass {
+  border-color: rgba(180, 138, 75, 0.5);
+}
+
+/* Illuminated Gold-Leaf Name Typography */
+.text-gold-leaf-illuminated {
+  background: linear-gradient(180deg, #fff7dc 0%, #f7d58b 45%, #d4a03e 78%, #9e7225 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 18px rgba(247, 213, 139, 0.4));
+}
+
+.text-gold-leaf {
+  color: #f7d58b;
+  text-shadow: 0 0 14px rgba(247, 213, 139, 0.35);
+}
+
+/* Alchemist Parchment texture overlay */
+.bg-parchment-pattern {
+  background-color: #1a140f;
+  background-image: 
+    radial-gradient(rgba(212, 175, 55, 0.08) 1px, transparent 0),
+    radial-gradient(rgba(0, 0, 0, 0.3) 1px, transparent 0);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
+}
+
+/* Glowing candle flicker subtle keyframe */
+@keyframes candleFlicker {
+  0%, 100% {
+    opacity: 0.92;
+    transform: scale(1);
+  }
+  25% {
+    opacity: 0.98;
+    transform: scale(1.02);
+  }
+  50% {
+    opacity: 0.88;
+    transform: scale(0.99);
+  }
+  75% {
+    opacity: 1;
+    transform: scale(1.03);
+  }
+}
+
+.animate-candle-glow {
+  animation: candleFlicker 4s infinite ease-in-out;
+}
+
+/* Custom scrollbars with aged brass tone */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(18, 14, 11, 0.85);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(146, 112, 66, 0.6);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 175, 55, 0.85);
+}
+
+/* =========================================================================
+   BORDERED PLAYER CARD LAYOUT STYLES
+   ========================================================================= */
+
+/* Collectible Bordered Player Card Frame */
+.player-card-frame {
+  background: linear-gradient(175deg, #1f1813 0%, #130e0a 40%, #0b0806 100%);
+  border: 4px double #b38947;
+  box-shadow: 
+    0 0 0 1px #46341d,
+    0 0 0 3px #18120c,
+    0 0 0 5px #7a5a2e,
+    0 25px 50px -12px rgba(0, 0, 0, 0.95),
+    0 0 40px rgba(212, 175, 55, 0.15);
+  position: relative;
+}
+
+/* Outer Card Rim with Rivets and Inlay */
+.player-card-rim {
+  border: 1px solid rgba(247, 213, 139, 0.35);
+  background: radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.12) 0%, transparent 60%);
+}
+
+/* Ornate Corner Accents */
+.card-corner-nw {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 16px;
+  height: 16px;
+  border-top: 3px solid #d4af37;
+  border-left: 3px solid #d4af37;
+  pointer-events: none;
+}
+.card-corner-ne {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 16px;
+  height: 16px;
+  border-top: 3px solid #d4af37;
+  border-right: 3px solid #d4af37;
+  pointer-events: none;
+}
+.card-corner-sw {
+  position: absolute;
+  bottom: 4px;
+  left: 4px;
+  width: 16px;
+  height: 16px;
+  border-bottom: 3px solid #d4af37;
+  border-left: 3px solid #d4af37;
+  pointer-events: none;
+}
+.card-corner-se {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  width: 16px;
+  height: 16px;
+  border-bottom: 3px solid #d4af37;
+  border-right: 3px solid #d4af37;
+  pointer-events: none;
+}
+
+/* Player Card Stat Orbs / Badges (Health, Mana, Strength) */
+.stat-orb-health {
+  background: radial-gradient(circle at 35% 30%, #ff5c5c 0%, #d91c38 45%, #7a0c1e 85%, #3d030c 100%);
+  border: 2px solid #ff9999;
+  box-shadow: 
+    0 0 14px rgba(235, 47, 75, 0.6),
+    inset 0 2px 4px rgba(255, 255, 255, 0.5),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.stat-orb-mana {
+  background: radial-gradient(circle at 35% 30%, #5cb3ff 0%, #1e70e3 45%, #0e3b8a 85%, #05163a 100%);
+  border: 2px solid #99d1ff;
+  box-shadow: 
+    0 0 14px rgba(30, 112, 227, 0.6),
+    inset 0 2px 4px rgba(255, 255, 255, 0.5),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.stat-orb-strength {
+  background: radial-gradient(circle at 35% 30%, #ffd066 0%, #d49219 45%, #7a500b 85%, #382203 100%);
+  border: 2px solid #ffe199;
+  box-shadow: 
+    0 0 14px rgba(212, 146, 25, 0.6),
+    inset 0 2px 4px rgba(255, 255, 255, 0.5),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Card Rarity Ribbon Badges */
+.badge-rarity-mythic {
+  background: linear-gradient(90deg, #ff416c, #8a2387, #e65c00);
+  border: 1px solid #ffd700;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.badge-rarity-legendary {
+  background: linear-gradient(90deg, #f7971e, #ffd200);
+  border: 1px solid #fff2a3;
+  color: #2b1803;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.6);
+}
+
+.badge-rarity-epic {
+  background: linear-gradient(90deg, #8e2de2, #4a00e0);
+  border: 1px solid #d8b4fe;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.badge-rarity-rare {
+  background: linear-gradient(90deg, #1e528e, #138496);
+  border: 1px solid #7dd3fc;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* Holographic Card Foil Effect */
+.card-foil-reflection {
+  background: linear-gradient(
+    115deg,
+    transparent 0%,
+    transparent 40%,
+    rgba(255, 255, 255, 0.12) 48%,
+    rgba(255, 215, 0, 0.18) 50%,
+    rgba(130, 200, 255, 0.15) 52%,
+    transparent 60%,
+    transparent 100%
+  );
+  background-size: 200% 200%;
+  pointer-events: none;
+}
